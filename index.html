@@ -5,13 +5,16 @@
       <script src="script.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <!-- Latest compiled and minified CSS -->
+       <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <link type="text/css" rel="stylesheet" href="style.css" />
+     
     </head>
     <body>
+        <img id="confettiImage" src="https://media.giphy.com/media/fxwpwPOhNknT2/giphy.gif">
         <div class="row">
             <div class="col-sm-4 col_1 pannel">
-                <h1>Instructions</h1>
+                <h1><b>Instructions</b></h1>
                 <h2 id="instructions"></h2>
                 <div class="row">
                     <div class=col-sm-4></div>
@@ -20,27 +23,27 @@
                 </div>
             </div>
             <div class="col-sm-4 pannel">
-                <h1>HTML Output</h1>
+                <h1><b>HTML Output</b></h1>
                 <h2 id="text" class="col_2"></h2>
             </div>
             <div class="col-sm-4 col_3 pannel">
-                <h1>HTML Input</h1>
+                <h1><b>HTML Input</b></h1>
                 <div class="row">
                     <textarea class="userInput" cols="50" rows="10"></textarea>
                 </div>
                 <div class="row">
                     <div class="col-sm-3"></div>
-                    <button id="submit" class="col-sm-6">Submit</button>
+                    <button id="submit" type="button" class="btn btn-primary btn-lg btn-block col-sm-6 buttonStyle">Submit</button>
                     <div class="col-sm-3"></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-3"></div>
-                    <button id="next" class="col-sm-6">Next Level!</button>
+                    <button id="next" type="button" class="btn btn-secondary btn-lg btn-block buttonStyle col-sm-6">Next Level!</button>
                     <div class="col-sm-3"></div>
                 </div>
                 <div class="row">
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
                     </div>
                 </div>
             </div>

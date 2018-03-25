@@ -1,10 +1,11 @@
 body {
     text-align: center;
     font-family: 'Allerta Stencil', sans-serif;
+    background-color:white;
 }
 .pannel {
-    border: 1px solid black;
-    padding: 15px; 
+    border: 1px solid gainsboro;
+    padding: 50px; 
     height: 100vh;
 }
 .error{
@@ -17,6 +18,24 @@ body {
     align-items: center;
     font-size: 18px;
 }
-.progress-bar{
-    
+#confettiImage{
+     position:absolute;
+     display:none;
+     top:0;
+     left:0;
+     width:100%;
+     z-index:0;
+     opacity:0.5;
+}
+
+
+textarea{
+    height:430px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border-color: gainsboro;
+}
+.buttonStyle{
+    margin-bottom: 30px;
 }

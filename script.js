@@ -6,32 +6,32 @@ $(document).ready(function(){
     {
         difficulty:"very easy",
         instructions:'Make header with "I Robot"',
-        imageURL:"https://i.pinimg.com/236x/24/04/b7/2404b7680fe382595126e74f5707b5c3--robot-clipart-ha-ha.jpg",
+        imageURL:"https://vignette.wikia.nocookie.net/goosebumps/images/d/dc/Robot.gif/revision/latest?cb=20170123203114",
         correctAnswer:"<h1>I Robot</h1>"
     },
     {
         difficulty:"easy",
         instructions:'Make a div and inside a paragraph with "I Dragon"',
-        imageURL:"http://www.getcoloringpages.com/images/99/995mh79.gif",
+        imageURL:"https://media1.tenor.com/images/f7b7545a3aff92df4e86816bf6deeadd/tenor.gif?itemid=5342788",
         correctAnswer:"<div><p>I Dragon</p></div>"
     },
     {
-        difficulty:"easy",
+        difficulty:"pretty easy",
         instructions:'Make a header with "I Dog" and an unordered list with "Brown" and "Happy" as list items.',
-        imageURL:"https://julieulstrup.files.wordpress.com/2010/08/happy-dog-in-the-snow2009-10-29-0143.jpg",
-        correctAnswer:"<h1>I Dog</h1><ul><li>Brown</li><li>Happy</li><ul>"
+        imageURL:"https://thumbs.gfycat.com/DaringSimilarLabradorretriever-max-1mb.gif",
+        correctAnswer:"<h1>I Dog</h1><ul><li>Brown</li><li>Happy</li></ul>"
     },
     {
-        difficulty:"easy",
+        difficulty:"simple",
         instructions:'Make me a button that say "I" and then create an input box.',
-        imageURL:"http://www.excel-easy.com/vba/examples/images/inputbox-function/inputbox-function-example-1.png",
+        imageURL:"http://www.sridharkatakam.com/wp-content/uploads/2014/01/clear-search-form.gif",
         correctAnswer:"<button>I</button><input>"
     },
     {
-        difficulty:"easy",
-        instructions:'Create a div with class "row". Inside the div make 6 divs with "col-sm-2". In the first div put I, the next put a space, the next put a "w", the next put an "o", the next put a "n", and last put an "s".',
-        imageURL:"http://www.excel-easy.com/vba/examples/images/inputbox-function/inputbox-function-example-1.png",
-        correctAnswer:'<div class="row"><div class="col-sm-2">I</div><div class="col-sm-2"> </div><div class="col-sm-2">W</div><div class="col-sm-2">o</div><div class="col-sm-2">n</div><div class="col-sm-2">s</div></div>'
+        difficulty:"average",
+        instructions:'Create a div with class "row". Inside the div make 6 divs with "col-sm-2". In the first div put I, the next put a space, the next put a "w", the next put an "o", the next put a "n", and last put an "z".',
+        imageURL:"https://media.giphy.com/media/1GTZA4flUzQI0/giphy.gif",
+        correctAnswer:'<div class="row"><div class="col-sm-2">I</div><div class="col-sm-2"> </div><div class="col-sm-2">W</div><div class="col-sm-2">o</div><div class="col-sm-2">n</div><div class="col-sm-2">z</div></div>'
     },
     ];
     var currentLevel = 0;
@@ -42,8 +42,8 @@ $(document).ready(function(){
         if(checkSolution(userInput, levels[currentLevel].correctAnswer)){
             updateHTML(userInput);
             currentLevel = currentLevel + 1;
-            $("body").append('<img src="http://gph.is/2dcEEy2">')
-            $("#next").show();
+            $("#confettiImage").fadeIn(1000);
+            $("#next").fadeIn(2000);
             updateProgressbar(currentLevel, levels.length);
         } else {
             showError();
@@ -85,6 +85,7 @@ $(document).ready(function(){
     function clearContent(){
         $(".userInput").val('');
         $(".col_2").empty();
+        $("#confettiImage").hide();
     }
 
     function updateProgressbar(currentLevel, numLevels){
@@ -92,5 +93,6 @@ $(document).ready(function(){
         progressPercent = progressPercent * 100
         console.log("run");
         $(".progress-bar").css("width", progressPercent+"%");
+        $(".progress-bar").html(progressPercent+"%");
     }
 });
