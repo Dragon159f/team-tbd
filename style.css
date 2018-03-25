@@ -2,5 +2,17 @@ body {
     text-align: center;
 }
 .pannel {
-    border: 3px solid black;
+    border: 1px solid black;
+    padding: 15px; 
+    height: 100vh;
+}
+.error{
+    
+}
+.alert-danger{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
 }
