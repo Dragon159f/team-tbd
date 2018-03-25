@@ -2,7 +2,7 @@
 <html>
     <head>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <script src="script.js" async></script>
+      <script src="script.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,12 +12,16 @@
         <div class="row">
             <div class="col-sm-4 col_1 pannel">
                 <h1>Instructions</h1>
-                <h2>(Example)Make Header with "I Robot"</h2>
-                <img src="https://i.pinimg.com/236x/24/04/b7/2404b7680fe382595126e74f5707b5c3--robot-clipart-ha-ha.jpg">
+                <h2 id="instructions"></h2>
+                <div class="row">
+                    <div class=col-sm-4></div>
+                    <img id="robotImage" class="thumbnail col-sm-4" src="https://i.pinimg.com/236x/24/04/b7/2404b7680fe382595126e74f5707b5c3--robot-clipart-ha-ha.jpg">
+                    <div class=col-sm-4></div>
+                </div>
             </div>
-            <div class="col-sm-4 col_2 pannel">
+            <div class="col-sm-4 pannel">
                 <h1>HTML Output</h1>
-                <h2 id="text">(Example) I Robot</h2>
+                <h2 id="text" class="col_2"></h2>
             </div>
             <div class="col-sm-4 col_3 pannel">
                 <h1>HTML Input</h1>
@@ -33,6 +37,11 @@
                     <div class="col-sm-3"></div>
                     <button id="next" class="col-sm-6">Next Level!</button>
                     <div class="col-sm-3"></div>
+                </div>
+                <div class="row">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                 </div>
             </div>
         </div>
