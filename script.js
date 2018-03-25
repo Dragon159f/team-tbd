@@ -4,13 +4,8 @@ $(document).ready(function(){
     //gets user input and returns a string
     function getInput(){
         var myString = $(".userInput").val();
-        console.log(myString);
+        return myString;
     }
-    
-    $("#submit").click(function(){
-        console.log("button is clicked");
-         console.log(getInput());
-    });
     
     //check if user is right  and return booleans
     function checkSolution(userInput, correctAnswer){
@@ -21,8 +16,8 @@ $(document).ready(function(){
     }}
     
     //update htmll page whenevr player gets question correct
-    function updateHTML(){
-        
+    function updateHTML(userInput){
+        $(".col_2").html(userInput);
     }
     //updates robot when player gets html correct
     function updateRobot(){
@@ -30,6 +25,16 @@ $(document).ready(function(){
     }
     //updates page when player is incorrect
     function showError(){
-        
+        $(".col_2").html("<h1>You have an error!</h1>");
     }
+
+    $("#submit").click(function(){
+        var userInput = getInput();
+        if(checkSolution(userInput, "anything") === true){
+            console.log("correct");
+        } else {
+            console.log("false");
+        }
+    });
+    
 });
